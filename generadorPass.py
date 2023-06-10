@@ -30,6 +30,12 @@ def generador(longitud, numero):
         shuffle(lista)
         fpassword = "".join(lista)
         passwords.append(fpassword)
+    fichero = open("passwords_generadas.txt", "a")
+    fichero.write("Nuevas Passwords creadas:\n")
+    for contra in passwords:
+        fichero.write(contra + "\n")
+    fichero.close()
+    print("Passwords guardados en passwords_generadas.txt.\nEstas son las passwords creadas:")
     return passwords
 
 
