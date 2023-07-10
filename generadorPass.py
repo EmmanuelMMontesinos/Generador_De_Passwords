@@ -11,8 +11,8 @@ NUMEROS = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 ESPECIALES = ["!", "@", "#", "$", "%"]
 
 layout = [[sg.Text("Nº de Contraseñas"), sg.Input(default_text="1", key="-input-", justification="right")],
-          [sg.Text("Que Longitud"), sg.Input(default_text="17",
-                                             key="-input2-", justification="right")],
+          [sg.Text("Longitud"), sg.Input(default_text="17",
+                                         key="-input2-", justification="right")],
           [sg.Button("Generar"), sg.Button("Copiar"), sg.Checkbox(
               "Caracteres especiales", key="-especiales-")],
           [sg.Multiline(key="-output-", size=(70, 5))]]
@@ -81,7 +81,8 @@ def solicitud():
 
 
 def main():
-    ventana = sg.Window("Generador de Contraseñas", layout=layout)
+    ventana = sg.Window("Generador de Contraseñas by Emmanuel M Montesinos",
+                        layout=layout, icon="icono.ico")
     while True:
         eventos, valores = ventana.read()
         if eventos == sg.WINDOW_CLOSED:
