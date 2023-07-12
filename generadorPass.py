@@ -25,7 +25,7 @@ def generadorsin(numero, longitud):
     for num in range(numero):
         password = ""
         fpassword = ""
-        for log in range(longitud):
+        for log in range(longitud + 1):
             if log == longitud - 2:
                 password = password + choice(NUMEROS)
             elif log != longitud - 1:
@@ -52,7 +52,7 @@ def generador(numero, longitud):
     for num in range(numero):
         password = ""
         fpassword = ""
-        for log in range(longitud):
+        for log in range(longitud + 1):
             if log == longitud - 2:
                 password = password + choice(ESPECIALES)
                 password = password + choice(NUMEROS)
